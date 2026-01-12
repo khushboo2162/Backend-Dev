@@ -1,0 +1,7 @@
+git checkout -b feature
+touch newfile.txt
+git add newfile.txt
+git commit -m "Add a new feature file"
+git checkout main
+git merge feature
+git branch -d feature
