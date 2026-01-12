@@ -1,0 +1,11 @@
+
+mkdir git_exercise
+cd git_exercise
+git init
+echo "# Git Exercise" > README.md
+git add README.md
+git commit -m "Add initial README file"
+echo "This is a new line of text." >> README.md
+git add README.md
+git commit -m "Append text to README"
+git log --oneline
