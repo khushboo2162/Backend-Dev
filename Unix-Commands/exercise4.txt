@@ -1,0 +1,23 @@
+# Exercise 4: GitHub Collaboration
+
+# 1. Fork the sample repository on GitHub
+#  On GitHub, go to the original repo you want to contribute to and click "Fork".
+#    This will create a copy under your account (khushboo/Backend-dev).
+
+# 2. Clone your fork to your local machine
+git clone https://github.com/khushboo/Backend-dev.git
+cd Backend-dev
+
+# 3. Create a new branch
+git checkout -b my-feature-branch
+
+# 4. Make changes and push to your fork
+echo "My collaboration change" >> example.txt
+git add example.txt
+git commit -m "Add collaboration change in example.txt"
+git push origin my-feature-branch
+
+# 5. Create a pull request to the original repository
+#  Go to your fork on GitHub (https://github.com/khushboo/Backend-dev),
+#    switch to 'my-feature-branch', and click "New Pull Request"
+#    to submit it to the original repository.
