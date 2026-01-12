@@ -1,0 +1,38 @@
+# Exercise 5: Advanced Workflow
+
+# 1. Initialize a repository with multiple files
+mkdir AdvancedWorkflow
+cd AdvancedWorkflow
+git init
+echo "File A content" > fileA.txt
+echo "File B content" > fileB.txt
+echo "File C content" > fileC.txt
+git add .
+git commit -m "Initial commit with multiple files"
+
+# 2. Create a .gitignore file
+echo "*.log" > .gitignore
+echo "node_modules/" >> .gitignore
+git add .gitignore
+git commit -m "Add .gitignore file"
+
+# 3. Use git stash to save work in progress
+echo "Temporary change" >> fileA.txt
+git add fileA.txt
+git stash save "WIP: temporary changes in fileA"
+
+# (Check stash list if needed)
+git stash list
+
+# 4. Create and tag a release
+git checkout -b release-v1.0
+git commit --allow-empty -m "Prepare release v1.0"
+git tag -a v1.0 -m "Release version 1.0"
+
+# 5. Push everything to GitHub including tags
+#  Replace <your-username> with your GitHub username (khushboo)
+# Replace <repo-name> with your repository name (Backend-dev)
+git remote add origin https://github.com/khushboo/Backend-dev.git
+git push origin main
+git push origin release-v1.0
+git push origin --tags
