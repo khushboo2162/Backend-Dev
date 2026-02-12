@@ -1,0 +1,10 @@
+<form method="POST">
+  <input name="title" placeholder="Title" />
+  <button>Add</button>
+</form>
+
+<ul>
+  <% posts.forEach((p, i) => { %>
+    <li><a href="/posts/<%= i %>"><%= p.title %></a></li>
+  <% }) %>
+</ul>
