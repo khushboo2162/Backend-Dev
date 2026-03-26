@@ -1,15 +1,12 @@
 import mongoose from "mongoose";
-const connectDb=async()=>{
-    try{
-        //await mongoose.connect("mongodb://127.0.0.1:27017/BackendDb") 
-         await mongoose.connect(process.env.MONGOURI);
-        console.log("Connection established")  
-    }
-    catch(error){
-        console.log("connection fail",error)
-    }
-   
-    // 127.0.0.1 means localhost (your own computer)
-    //27017 is the default port on which MongoDB runs 
-}
+
+const connectDb = async () => {
+  try {
+    await mongoose.connect(process.env.MONGO_URI);
+    console.log("Connection established");
+  } catch (error) {
+    console.log("connection fail", error);
+  }
+};
+
 export default connectDb;
